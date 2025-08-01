@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Salary Slip</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        .slip { max-width: 400px; margin: auto; border: 1px solid #ccc; padding: 24px; border-radius: 8px; background: #f9f9f9; }
+        h2 { text-align: center; }
+        hr { margin: 16px 0; }
+        .row { margin-bottom: 8px; }
+        .label { font-weight: bold; display: inline-block; width: 140px; }
+    </style>
+</head>
+<body>
+    <div class="slip">
+        <h2>Salary Slip</h2>
+        <div class="row"><span class="label">Employee No:</span> {{ empno }}</div>
+        <div class="row"><span class="label">Name:</span> {{ name }}</div>
+        <div class="row"><span class="label">Designation:</span> {{ designation }}</div>
+        <hr>
+        <div class="row"><span class="label">Basic Salary:</span> {{ basic|round(2) }}</div>
+        <div class="row"><span class="label">HRA (20%):</span> {{ hra|round(2) }}</div>
+        <div class="row"><span class="label">DA (10%):</span> {{ da|round(2) }}</div>
+        <div class="row"><span class="label">Gross Salary:</span> {{ gross|round(2) }}</div>
+        <div class="row"><span class="label">PF (12%):</span> {{ pf|round(2) }}</div>
+        <div class="row"><span class="label">Net Salary:</span> {{ net|round(2) }}</div>
+        <hr>
+    </div>
+</body>
+</html>
